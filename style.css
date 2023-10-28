@@ -1,0 +1,208 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+body {
+    background-color: #0d1117;
+}
+
+header {
+    /* border: 2px solid red; */
+    width: 100%;
+    padding: 30px 10%;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+    background-color: #0d1117;
+
+}
+
+.list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.list .sub_list {
+    display: flex;
+    justify-content: center;
+    justify-content: space-evenly;
+    list-style: none;
+    gap: 3rem;
+}
+
+.sub_list a {
+    text-decoration: none;
+    color: white;
+}
+
+.toggle {
+    color: white;
+    font-size: 1.5rem;
+    display: none;
+}
+
+/* first section */
+section {
+    /* border: 2px solid red; */
+    max-height: 100vh;
+}
+
+.cover {
+    background-color: white;
+    height: 300px;
+}
+
+.cover img {
+    object-fit: cover;
+    width: 100%;
+    height: 200px;
+}
+
+.box {
+    width: 70%;
+    top: 140px;
+    position: absolute;
+    padding: 20px 10%;
+}
+
+.profile {
+    display: block;
+    border-radius: 100%;
+}
+
+.profile img {
+    max-width: 100%;
+    width: 250px;
+    border-radius: 50%;
+    border: 5px solid white;
+    transition: 0.30s all ease-out;
+}
+
+.profile:hover img {
+    transform: rotate(2deg);
+}
+
+.profile h1 {
+    color: white;
+    font-size: 2rem;
+    margin-top: 1rem;
+}
+
+.profile p {
+    color: white;
+    margin-top: 1rem;
+}
+
+.profile span a {
+    text-decoration: none;
+    color: #2563eb;
+    animation-name: blink;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-delay: 1s;
+}
+
+.profile span a:hover {
+    color: white;
+    transition: 0.40s all ease-in-out;
+}
+
+.second {
+    /* border: 2px solid burlywood; */
+    margin-top: 20rem;
+    /* background-color: white; */
+    padding: 20px 10%;
+}
+
+.second p {
+    margin-left: 1rem;
+    color: #e2e8f0;
+}
+
+.third {
+    padding: 20px 10%;
+
+}
+
+.fourth {
+    padding: 20px 10%;
+}
+
+.fifth {
+    padding: 20px 10%;
+}
+
+.six {
+    padding: 20px 10%;
+}
+
+.seven {
+    padding: 20px 10%;
+}
+
+.eight {
+    padding: 20px 10%;
+}
+
+.reveal li {
+    color: #cbd5e1;
+    list-style: none;
+    margin-left: 1rem;
+}
+
+.reveal h1 {
+    margin-bottom: 1rem;
+}
+
+/* animation on anchor */
+@keyframes blink {
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+
+}
+
+.reveal {
+    position: relative;
+    transform: translateY(-150px);
+    opacity: 0;
+    transition: 1.5s all ease;
+}
+
+.reveal.active {
+    transform: translate(0);
+    opacity: 1;
+}
+
+/* responsive */
+@media screen and (max-width: 500px) {
+    .toggle {
+        display: block;
+        cursor: pointer;
+    }
+
+    .listing {
+        display: none;
+    }
+
+    .box {
+        width: 100%;
+    }
+
+
+}
